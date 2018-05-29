@@ -1,22 +1,10 @@
-// Popover
-
 $(document).ready(function(){
+    console.log('hi');
+
+    // popover
     $('[data-toggle="popover"]').popover();
 
-    // get last commit
-    var git = require('git-last-commit');
+    var msg_file = ".git/COMMIT_EDITMSG";
+    var str = "";
 
-    git.getLastCommit(function(err, commit) {
-      // read commit object properties
-      console.log(commit);
-    });
 });
-
-/*import fake.js;
-
-int count = tdata.length;
-
-if count <15 {
-  $(#progressTable).class= "col-xs-3";
-}
-*/
