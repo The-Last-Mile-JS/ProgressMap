@@ -4,7 +4,4 @@ $(document).ready(function(){
     // popover
     $('[data-toggle="popover"]').popover();
 
-    var msg_file = ".git/COMMIT_EDITMSG";
-    var str = "";
-
 });
