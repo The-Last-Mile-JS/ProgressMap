@@ -4,15 +4,18 @@ $(document).ready(function(){
     // popover
     $('[data-toggle="popover"]').popover();
 
-    // read database
-
+    // read database and change listed buttons to done
     var file = "commit_db.rb";
-
     var reader = new FileReader();
-    for (var i = 0; i < commits.length-1; i++) {
-      console.log(commits[i]);
-      var target = this.getElementById(commits[i]).className += " done";
-      // change class to completed
+    var count = commits.length-1
+
+    // change pie chart
+    this.getElementById("cir-done").setAttribute("stroke-dasharray", count.toString() + " 100");
+
+    console.log(count.toString() + " 100");
+
+    for (var i = 0; i < count; i++) {
+      this.getElementById(commits[i]).className += " done";
     }
 
 });
