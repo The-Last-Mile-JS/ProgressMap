@@ -1,2 +1,2 @@
 var commits = [
-browser,browser,test];
+"commit_db","test"];

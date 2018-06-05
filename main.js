@@ -9,16 +9,8 @@ $(document).ready(function(){
     var file = "commit_db.rb";
 
     var reader = new FileReader();
-    reader.onload = function(progressEvent){
-      // Entire file
-      console.log(this.result);
-
-      // By lines
-      var lines = this.result.split('\n');
-      for(var line = 0; line < lines.length; line++){
-        console.log(lines[line]);
-      }
-    };
-    reader.readAsText(file);
+    for (var i = 0; i < commits.length; i++) {
+      console.log(commits[i])
+    }
 
 });

@@ -11,7 +11,7 @@ post '/' do
 
   File.open('commit_db.js', 'r+') do |file|
     lines = file.each_line.to_a
-    lines.insert(1, "#{commit}" + ",")
+    lines.insert(1, "\"#{commit}\"" + ",")
     file.rewind
     file.write(lines.join)
   end
