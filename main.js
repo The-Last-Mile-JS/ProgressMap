@@ -4,11 +4,21 @@ $(document).ready(function(){
     // popover
     $('[data-toggle="popover"]').popover();
 
-    // Check for the various File API support.
-    if (window.File && window.FileReader && window.FileList && window.Blob) {
-      // Great success! All the File APIs are supported.
-    } else {
-      alert('The File APIs are not fully supported in this browser.');
-    }
+    // read database
+
+    var file = "commit_db.rb";
+
+    var reader = new FileReader();
+    reader.onload = function(progressEvent){
+      // Entire file
+      console.log(this.result);
+
+      // By lines
+      var lines = this.result.split('\n');
+      for(var line = 0; line < lines.length; line++){
+        console.log(lines[line]);
+      }
+    };
+    reader.readAsText(file);
 
 });
